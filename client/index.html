@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="th" data-theme="dark" data-mood="liquid-aurora">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ดูดวงค่ะอีหญิง (แม่หมอเพื่อนสาว & ดวง 4 ศาสตร์)</title>
+    <meta name="description" content="ดูดวงค่ะอีหญิง - แอปดูดวงแบบไม่หวานเจี๊ยบแต่ตรงจนมีสะดุ้ง ลึกลับสไตล์แม่หมอเหมียวและกำมะหยี่ทอง ครบ 4 ศาสตร์ พร้อมคำนวณพลังงานจักรวาลแบบเรียลไทม์" />
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem('thecatroom_color_scheme') || 'system';
+          const theme = saved === 'system'
+            ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+            : saved;
+          const mood = localStorage.getItem('thecatroom_interface_mood_v2') || 'liquid-aurora';
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.dataset.mood = mood;
+          document.documentElement.style.colorScheme = theme;
+        } catch (_) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
