@@ -1,0 +1,8 @@
+{
+  "name": "Remix แม่หมอเพื่อนสาว (Sassy Astro \u0026 Billing)",
+  "description": "แอปดูดวง 4 ศาสตร์และดวงประจำวัน (จีน, ยิปซี, โอราเคิล, หินรูน, Daily Horoscope) สไตล์เพื่อนสาวจิกกัดแต่หวังดี ผสานจิตวิทยาและวิทยาศาสตร์ พร้อมระบบแชทบอทต่อเนื่องและระบบเก็บเงินลูกดวง",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

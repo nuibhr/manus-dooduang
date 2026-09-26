@@ -1,0 +1,65 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with coins balance and account settings",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "coins": { "type": "number" },
+        "solarSign": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "email", "coins", "createdAt"]
+    },
+    "Reading": {
+      "title": "Reading",
+      "description": "A saved fortune reading entry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "discipline": { "type": "string" },
+        "topic": { "type": "string" },
+        "question": { "type": "string" },
+        "markdownContent": { "type": "string" },
+        "sassyLevel": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "userId", "discipline", "topic", "question", "markdownContent", "timestamp"]
+    },
+    "Transaction": {
+      "title": "Transaction",
+      "description": "Ledger of earned and spent coins",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "type": { "type": "string", "enum": ["earn", "spend"] },
+        "amount": { "type": "number" },
+        "reason": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "balanceAfter": { "type": "number" }
+      },
+      "required": ["id", "userId", "type", "amount", "reason", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile document owned by the user"
+    },
+    "/users/{userId}/readings/{readingId}": {
+      "schema": "Reading",
+      "description": "Private fortune reading records for this user"
+    },
+    "/users/{userId}/transactions/{txId}": {
+      "schema": "Transaction",
+      "description": "Coin transaction history for this user"
+    }
+  }
+}

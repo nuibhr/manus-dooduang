@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-mood="mystic-purple"] {
+    --cat-surface: #110918;
+    --cat-surface-bright: #24102E;
+    --cat-container: #1E0E2A;
+    --cat-container-high: #2A143A;
+    --cat-container-highest: #361A4A;
+    --cat-cream: #FAE9CA;
+    --cat-muted: #C9B49D;
+    --cat-gold: #EAC272;
+    --cat-gold-glow: rgba(234, 194, 114, 0.3);
+    --cat-plum: #842C71;
+    --cat-border: rgba(242, 203, 128, 0.16);
+    --cat-border-glow: rgba(242, 203, 128, 0.38);
+    --cat-card-gradient: radial-gradient(130% 130% at 50% 0%, #24102E 0%, #180B22 60%, #110918 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #FFDE9E 0%, #EAC272 60%, #D4A84D 100%);
+    --cat-accent-gradient: linear-gradient(135deg, #FFE8B8 0%, #EAC272 50%, #C99E4A 100%);
+    --cat-nav-bg: rgba(17, 9, 24, 0.92);
+    --cat-scrollbar-thumb: #2A143A;
+  }
+
+  [data-mood="gilded-gold"] {
+    --cat-surface: #140F06;
+    --cat-surface-bright: #281F0C;
+    --cat-container: #201708;
+    --cat-container-high: #30240E;
+    --cat-container-highest: #443213;
+    --cat-cream: #FFF4DC;
+    --cat-muted: #D8C5A2;
+    --cat-gold: #F6C958;
+    --cat-gold-glow: rgba(246, 201, 88, 0.38);
+    --cat-plum: #9E6C15;
+    --cat-border: rgba(246, 201, 88, 0.24);
+    --cat-border-glow: rgba(246, 201, 88, 0.52);
+    --cat-card-gradient: radial-gradient(130% 130% at 50% 0%, #2D220D 0%, #1B1306 60%, #140F06 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #FFF3CE 0%, #F6C958 60%, #D6A42B 100%);
+    --cat-accent-gradient: linear-gradient(135deg, #FFF5D6 0%, #F6C958 50%, #BD8C1B 100%);
+    --cat-nav-bg: rgba(20, 15, 6, 0.92);
+    --cat-scrollbar-thumb: #35270F;
+  }
+
+  [data-mood="midnight-black"] {
+    --cat-surface: #09090B;
+    --cat-surface-bright: #16161A;
+    --cat-container: #121216;
+    --cat-container-high: #1C1C22;
+    --cat-container-highest: #282832;
+    --cat-cream: #EDEDF2;
+    --cat-muted: #A0A0B2;
+    --cat-gold: #D8D8E6;
+    --cat-gold-glow: rgba(216, 216, 230, 0.28);
+    --cat-plum: #424256;
+    --cat-border: rgba(255, 255, 255, 0.14);
+    --cat-border-glow: rgba(255, 255, 255, 0.32);
+    --cat-card-gradient: radial-gradient(130% 130% at 50% 0%, #1A1A22 0%, #111116 60%, #09090B 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #FFFFFF 0%, #D8D8E6 60%, #AEAEBE 100%);
+    --cat-accent-gradient: linear-gradient(135deg, #FFFFFF 0%, #D8D8E6 50%, #9898AA 100%);
+    --cat-nav-bg: rgba(9, 9, 11, 0.92);
+    --cat-scrollbar-thumb: #22222A;
+  }
+
+  [data-mood="emerald-oracle"] {
+    --cat-surface: #061210;
+    --cat-surface-bright: #0E2320;
+    --cat-container: #0A1C19;
+    --cat-container-high: #122C28;
+    --cat-container-highest: #1B3E38;
+    --cat-cream: #E8F8F5;
+    --cat-muted: #9BC7BE;
+    --cat-gold: #4ECCA3;
+    --cat-gold-glow: rgba(78, 204, 163, 0.35);
+    --cat-plum: #165B53;
+    --cat-border: rgba(78, 204, 163, 0.2);
+    --cat-border-glow: rgba(78, 204, 163, 0.45);
+    --cat-card-gradient: radial-gradient(130% 130% at 50% 0%, #122B27 0%, #091A17 60%, #061210 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #A8F5DF 0%, #4ECCA3 60%, #208B6E 100%);
+    --cat-accent-gradient: linear-gradient(135deg, #C2F9EB 0%, #4ECCA3 50%, #177C60 100%);
+    --cat-nav-bg: rgba(6, 18, 16, 0.92);
+    --cat-scrollbar-thumb: #163B34;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans Thai', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--cat-surface);
+    color: var(--cat-cream);
+    min-height: 100vh;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  body, header, footer, .velvet-card, .btn-gilded, .gilded-border, .gilded-border-active {
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: 'DM Serif Display', serif;
+  }
+}
+
+/* Custom Gilded Velvet Utilities connected directly to CSS Variables */
+.gilded-border {
+  border: 1px solid var(--cat-border);
+  box-shadow: 0 0 15px var(--cat-gold-glow);
+}
+
+.gilded-border-active {
+  border: 1px solid var(--cat-border-glow);
+  box-shadow: 0 0 20px var(--cat-gold-glow);
+}
+
+.velvet-card {
+  background: var(--cat-card-gradient);
+  border: 1px solid var(--cat-border);
+  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), inset 0 1px 0 var(--cat-border);
+}
+
+.gold-gradient-text {
+  background: var(--cat-accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plum-pill {
+  background: var(--cat-container-highest);
+  border: 1px solid var(--cat-border);
+  color: var(--cat-cream);
+}
+
+.btn-gilded {
+  background: var(--cat-btn-gradient);
+  color: var(--cat-surface);
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px var(--cat-gold-glow);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gilded:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 12px 28px var(--cat-gold-glow);
+  filter: brightness(1.06);
+}
+
+.btn-gilded:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Dynamic theme utility classes */
+.theme-surface {
+  background-color: var(--cat-surface) !important;
+}
+
+.theme-container {
+  background-color: var(--cat-container) !important;
+}
+
+.theme-container-high {
+  background-color: var(--cat-container-high) !important;
+}
+
+.theme-container-highest {
+  background-color: var(--cat-container-highest) !important;
+}
+
+.theme-text-cream {
+  color: var(--cat-cream) !important;
+}
+
+.theme-text-gold {
+  color: var(--cat-gold) !important;
+}
+
+.theme-text-muted {
+  color: var(--cat-muted) !important;
+}
+
+.theme-border {
+  border-color: var(--cat-border) !important;
+}
+
+/* Custom Scrollbar for Cat Room */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cat-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cat-scrollbar-thumb);
+  border-radius: 9999px;
+  border: 1px solid var(--cat-border);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cat-container-highest);
+  border-color: var(--cat-border-glow);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
