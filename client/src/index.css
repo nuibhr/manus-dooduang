@@ -1,0 +1,1056 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-mood="liquid-aurora"] {
+    --cat-surface: #050816;
+    --cat-surface-bright: #0A1228;
+    --cat-container: #101932;
+    --cat-container-high: #152142;
+    --cat-container-highest: #1C2B56;
+    --cat-cream: #F7FBFF;
+    --cat-muted: #AFC4E5;
+    --cat-gold: #8BE9FD;
+    --cat-gold-glow: rgba(139, 233, 253, 0.32);
+    --cat-plum: #8B5CF6;
+    --cat-border: rgba(203, 226, 255, 0.18);
+    --cat-border-glow: rgba(203, 226, 255, 0.48);
+    --cat-card-gradient: linear-gradient(150deg, #101932 0%, #0A1228 52%, #070C1B 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #E8F7FF 0%, #8BE9FD 48%, #A78BFA 100%);
+    --cat-accent-gradient: linear-gradient(105deg, #F7FBFF 0%, #8BE9FD 42%, #C4B5FD 75%, #F0ABFC 100%);
+    --cat-nav-bg: rgba(8, 14, 31, 0.62);
+    --cat-scrollbar-thumb: #243766;
+    --liquid-fill: rgba(220, 239, 255, 0.095);
+    --liquid-fill-hover: rgba(222, 241, 255, 0.16);
+    --liquid-edge: rgba(231, 245, 255, 0.34);
+    --liquid-edge-strong: rgba(255, 255, 255, 0.58);
+    --liquid-shadow: rgba(1, 5, 18, 0.46);
+    --liquid-glow: rgba(125, 211, 252, 0.2);
+  }
+
+  [data-mood="mystic-purple"] {
+    --cat-surface: #110918;
+    --cat-surface-bright: #24102E;
+    --cat-container: #1E0E2A;
+    --cat-container-high: #2A143A;
+    --cat-container-highest: #361A4A;
+    --cat-cream: #FAE9CA;
+    --cat-muted: #C9B49D;
+    --cat-gold: #EAC272;
+    --cat-gold-glow: rgba(234, 194, 114, 0.3);
+    --cat-plum: #842C71;
+    --cat-border: rgba(242, 203, 128, 0.16);
+    --cat-border-glow: rgba(242, 203, 128, 0.38);
+    --cat-card-gradient: radial-gradient(130% 130% at 50% 0%, #24102E 0%, #180B22 60%, #110918 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #FFDE9E 0%, #EAC272 60%, #D4A84D 100%);
+    --cat-accent-gradient: linear-gradient(135deg, #FFE8B8 0%, #EAC272 50%, #C99E4A 100%);
+    --cat-nav-bg: rgba(17, 9, 24, 0.92);
+    --cat-scrollbar-thumb: #2A143A;
+  }
+
+  [data-mood="gilded-gold"] {
+    --cat-surface: #140F06;
+    --cat-surface-bright: #281F0C;
+    --cat-container: #201708;
+    --cat-container-high: #30240E;
+    --cat-container-highest: #443213;
+    --cat-cream: #FFF4DC;
+    --cat-muted: #D8C5A2;
+    --cat-gold: #F6C958;
+    --cat-gold-glow: rgba(246, 201, 88, 0.38);
+    --cat-plum: #9E6C15;
+    --cat-border: rgba(246, 201, 88, 0.24);
+    --cat-border-glow: rgba(246, 201, 88, 0.52);
+    --cat-card-gradient: radial-gradient(130% 130% at 50% 0%, #2D220D 0%, #1B1306 60%, #140F06 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #FFF3CE 0%, #F6C958 60%, #D6A42B 100%);
+    --cat-accent-gradient: linear-gradient(135deg, #FFF5D6 0%, #F6C958 50%, #BD8C1B 100%);
+    --cat-nav-bg: rgba(20, 15, 6, 0.92);
+    --cat-scrollbar-thumb: #35270F;
+  }
+
+  [data-mood="midnight-black"] {
+    --cat-surface: #09090B;
+    --cat-surface-bright: #16161A;
+    --cat-container: #121216;
+    --cat-container-high: #1C1C22;
+    --cat-container-highest: #282832;
+    --cat-cream: #EDEDF2;
+    --cat-muted: #A0A0B2;
+    --cat-gold: #D8D8E6;
+    --cat-gold-glow: rgba(216, 216, 230, 0.28);
+    --cat-plum: #424256;
+    --cat-border: rgba(255, 255, 255, 0.14);
+    --cat-border-glow: rgba(255, 255, 255, 0.32);
+    --cat-card-gradient: radial-gradient(130% 130% at 50% 0%, #1A1A22 0%, #111116 60%, #09090B 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #FFFFFF 0%, #D8D8E6 60%, #AEAEBE 100%);
+    --cat-accent-gradient: linear-gradient(135deg, #FFFFFF 0%, #D8D8E6 50%, #9898AA 100%);
+    --cat-nav-bg: rgba(9, 9, 11, 0.92);
+    --cat-scrollbar-thumb: #22222A;
+  }
+
+  [data-mood="emerald-oracle"] {
+    --cat-surface: #061210;
+    --cat-surface-bright: #0E2320;
+    --cat-container: #0A1C19;
+    --cat-container-high: #122C28;
+    --cat-container-highest: #1B3E38;
+    --cat-cream: #E8F8F5;
+    --cat-muted: #9BC7BE;
+    --cat-gold: #4ECCA3;
+    --cat-gold-glow: rgba(78, 204, 163, 0.35);
+    --cat-plum: #165B53;
+    --cat-border: rgba(78, 204, 163, 0.2);
+    --cat-border-glow: rgba(78, 204, 163, 0.45);
+    --cat-card-gradient: radial-gradient(130% 130% at 50% 0%, #122B27 0%, #091A17 60%, #061210 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #A8F5DF 0%, #4ECCA3 60%, #208B6E 100%);
+    --cat-accent-gradient: linear-gradient(135deg, #C2F9EB 0%, #4ECCA3 50%, #177C60 100%);
+    --cat-nav-bg: rgba(6, 18, 16, 0.92);
+    --cat-scrollbar-thumb: #163B34;
+  }
+
+  /* Light Liquid Glass is a color-scheme layer, independent from the selected mood. */
+  [data-theme="light"] {
+    --cat-surface: #EEF4FF;
+    --cat-surface-bright: #F8FBFF;
+    --cat-container: #FFFFFF;
+    --cat-container-high: #F2F6FF;
+    --cat-container-highest: #E4EBFB;
+    --cat-cream: #14213D;
+    --cat-muted: #596982;
+    --cat-gold: #087E9E;
+    --cat-gold-glow: rgba(8, 126, 158, 0.18);
+    --cat-plum: #7C58C7;
+    --cat-border: rgba(50, 76, 122, 0.16);
+    --cat-border-glow: rgba(44, 117, 164, 0.38);
+    --cat-card-gradient: linear-gradient(150deg, #FFFFFF 0%, #F4F7FF 54%, #EAF0FC 100%);
+    --cat-btn-gradient: linear-gradient(135deg, #FFFFFF 0%, #A9EAF6 48%, #BFAEF5 100%);
+    --cat-accent-gradient: linear-gradient(105deg, #1F3B64 0%, #087E9E 42%, #7254BC 75%, #A43A95 100%);
+    --cat-nav-bg: rgba(248, 251, 255, 0.7);
+    --cat-scrollbar-thumb: #B8C7E3;
+    --liquid-fill: rgba(255, 255, 255, 0.54);
+    --liquid-fill-hover: rgba(255, 255, 255, 0.82);
+    --liquid-edge: rgba(255, 255, 255, 0.8);
+    --liquid-edge-strong: rgba(255, 255, 255, 0.98);
+    --liquid-shadow: rgba(41, 64, 103, 0.28);
+    --liquid-glow: rgba(51, 173, 207, 0.2);
+  }
+
+  [data-theme="light"][data-mood="mystic-purple"] {
+    --cat-gold: #8A5A16;
+    --cat-plum: #9E5BB5;
+    --cat-btn-gradient: linear-gradient(135deg, #FFFDF8 0%, #F4D99C 58%, #D9B763 100%);
+  }
+
+  [data-theme="light"][data-mood="gilded-gold"] {
+    --cat-surface: #FBF7ED;
+    --cat-surface-bright: #FFFDF7;
+    --cat-container-highest: #F1E5C8;
+    --cat-gold: #8B6500;
+    --cat-plum: #B98322;
+  }
+
+  [data-theme="light"][data-mood="midnight-black"] {
+    --cat-surface: #F2F3F7;
+    --cat-surface-bright: #FFFFFF;
+    --cat-container-highest: #E1E3EA;
+    --cat-gold: #3D465B;
+    --cat-plum: #6A6E80;
+  }
+
+  [data-theme="light"][data-mood="emerald-oracle"] {
+    --cat-surface: #EFF9F5;
+    --cat-surface-bright: #FAFFFD;
+    --cat-container-highest: #DCEFE8;
+    --cat-gold: #17795F;
+    --cat-plum: #38927A;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans Thai', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--cat-surface);
+    background-image:
+      radial-gradient(circle at 14% 8%, color-mix(in srgb, var(--cat-plum) 28%, transparent) 0, transparent 34%),
+      radial-gradient(circle at 84% 14%, color-mix(in srgb, var(--cat-gold) 18%, transparent) 0, transparent 30%),
+      linear-gradient(155deg, var(--cat-surface) 0%, var(--cat-surface-bright) 48%, var(--cat-surface) 100%);
+    background-attachment: fixed;
+    color: var(--cat-cream);
+    min-height: 100vh;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  body, header, footer, .velvet-card, .btn-gilded, .gilded-border, .gilded-border-active {
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: 'DM Serif Display', serif;
+  }
+}
+
+/* Custom Gilded Velvet Utilities connected directly to CSS Variables */
+.gilded-border {
+  border: 1px solid var(--cat-border);
+  box-shadow: 0 0 15px var(--cat-gold-glow);
+}
+
+.gilded-border-active {
+  border: 1px solid var(--cat-border-glow);
+  box-shadow: 0 0 20px var(--cat-gold-glow);
+}
+
+.velvet-card {
+  background: var(--cat-card-gradient);
+  border: 1px solid var(--cat-border);
+  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), inset 0 1px 0 var(--cat-border);
+}
+
+.gold-gradient-text {
+  background: var(--cat-accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plum-pill {
+  background: var(--cat-container-highest);
+  border: 1px solid var(--cat-border);
+  color: var(--cat-cream);
+}
+
+.btn-gilded {
+  background: var(--cat-btn-gradient);
+  color: var(--cat-surface);
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px var(--cat-gold-glow);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gilded:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 12px 28px var(--cat-gold-glow);
+  filter: brightness(1.06);
+}
+
+.btn-gilded:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Dynamic theme utility classes */
+.theme-surface {
+  background-color: var(--cat-surface) !important;
+}
+
+.theme-container {
+  background-color: var(--cat-container) !important;
+}
+
+.theme-container-high {
+  background-color: var(--cat-container-high) !important;
+}
+
+.theme-container-highest {
+  background-color: var(--cat-container-highest) !important;
+}
+
+.theme-text-cream {
+  color: var(--cat-cream) !important;
+}
+
+.theme-text-gold {
+  color: var(--cat-gold) !important;
+}
+
+.theme-text-muted {
+  color: var(--cat-muted) !important;
+}
+
+.theme-border {
+  border-color: var(--cat-border) !important;
+}
+
+/* Custom Scrollbar for Cat Room */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cat-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cat-scrollbar-thumb);
+  border-radius: 9999px;
+  border: 1px solid var(--cat-border);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cat-container-highest);
+  border-color: var(--cat-border-glow);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* ========================================================================== */
+/* Liquid Glass control layer                                                 */
+/* Glass is reserved for navigation and controls; content cards stay opaque.  */
+/* ========================================================================== */
+.liquid-header-shell {
+  padding: 10px 12px 0;
+  background: transparent !important;
+  border: 0 !important;
+  pointer-events: none;
+}
+
+.liquid-navbar,
+.liquid-dock,
+.liquid-toolbar,
+.liquid-popover,
+.liquid-toast {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.055) 54%, rgba(143, 192, 255, 0.08)),
+    var(--cat-nav-bg) !important;
+  border: 1px solid var(--liquid-edge) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(1.75);
+  backdrop-filter: blur(22px) saturate(1.75);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.34),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.08),
+    0 18px 54px -26px var(--liquid-shadow),
+    0 0 0 1px rgba(255, 255, 255, 0.025);
+}
+
+.liquid-navbar {
+  pointer-events: auto;
+  border-radius: 28px;
+  transition: padding 220ms cubic-bezier(0.23, 1, 0.32, 1),
+              border-radius 220ms cubic-bezier(0.23, 1, 0.32, 1),
+              background 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.liquid-header-shell.is-compact .liquid-navbar {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.045)),
+    color-mix(in srgb, var(--cat-surface) 78%, transparent) !important;
+}
+
+.liquid-dock-shell {
+  pointer-events: auto;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.liquid-dock {
+  width: max-content;
+  max-width: min(100%, 80rem);
+  border-radius: 999px;
+}
+
+.liquid-navbar button,
+.liquid-dock button,
+.liquid-toolbar button,
+.liquid-toolbar select,
+.liquid-app button.rounded-full,
+.liquid-app select {
+  -webkit-backdrop-filter: blur(16px) saturate(1.65);
+  backdrop-filter: blur(16px) saturate(1.65);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.28),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.07),
+    0 8px 24px -16px var(--liquid-shadow);
+  transition:
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.liquid-navbar button:hover,
+.liquid-dock button:hover,
+.liquid-toolbar button:hover,
+.liquid-app button.rounded-full:hover {
+  transform: translateY(-1px);
+  border-color: var(--liquid-edge-strong) !important;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.42),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.1),
+    0 12px 30px -16px var(--liquid-shadow),
+    0 0 24px var(--liquid-glow);
+}
+
+.liquid-navbar button:active,
+.liquid-dock button:active,
+.liquid-toolbar button:active,
+.liquid-app button.rounded-full:active {
+  transform: scale(0.97);
+}
+
+.liquid-tab {
+  background: rgba(255, 255, 255, 0.035) !important;
+  border: 1px solid transparent !important;
+}
+
+.liquid-tab:hover {
+  background: var(--liquid-fill-hover) !important;
+}
+
+.liquid-tab[class*="border-\[rgba"] {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(125, 211, 252, 0.12)),
+    var(--liquid-fill) !important;
+  border-color: var(--liquid-edge-strong) !important;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.48),
+    0 8px 28px -14px var(--liquid-shadow),
+    0 0 20px var(--liquid-glow) !important;
+}
+
+.liquid-brand-orb {
+  background:
+    radial-gradient(circle at 32% 22%, rgba(255,255,255,.75), transparent 16%),
+    radial-gradient(circle at 68% 74%, rgba(240,171,252,.55), transparent 36%),
+    linear-gradient(145deg, rgba(139,233,253,.72), rgba(139,92,246,.72));
+  border: 1px solid rgba(255,255,255,.44);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  backdrop-filter: blur(16px) saturate(1.8);
+  box-shadow: inset 0 1px 2px rgba(255,255,255,.62), 0 12px 30px -12px rgba(125,211,252,.56);
+}
+
+.liquid-chip {
+  color: var(--cat-cream);
+  background: var(--liquid-fill);
+  border: 1px solid var(--liquid-edge);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.2);
+}
+
+.liquid-popover {
+  border-radius: 22px;
+}
+
+.liquid-toolbar {
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-toolbar::before,
+.liquid-navbar::before,
+.liquid-dock::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(110deg, rgba(255,255,255,.16), transparent 22%, transparent 72%, rgba(139,233,253,.09));
+  mask-image: linear-gradient(#000, transparent 44%);
+}
+
+.liquid-toast {
+  border-radius: 999px;
+}
+
+.liquid-icon-button {
+  color: var(--cat-gold);
+  background: var(--liquid-fill);
+  border-color: var(--liquid-edge) !important;
+}
+
+/* Mobile bottom navigation */
+.liquid-bottom-wrap {
+  position: fixed;
+  /* Stay above page content, but below every dialog/sheet portal (z-50+). */
+  z-index: 35;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 10px calc(8px + env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+
+.liquid-bottom-nav {
+  pointer-events: auto;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 7px;
+  border: 1px solid var(--liquid-edge);
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.2), rgba(255,255,255,.055) 58%, rgba(139,233,253,.1)),
+    var(--cat-nav-bg);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  backdrop-filter: blur(24px) saturate(1.8);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.5),
+    0 18px 46px -18px var(--liquid-shadow),
+    0 0 28px var(--liquid-glow);
+}
+
+.liquid-bottom-item {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid transparent;
+  border-radius: 19px;
+  color: var(--cat-muted);
+  font-size: 10px;
+  font-weight: 700;
+  transition: transform 160ms cubic-bezier(.23,1,.32,1), background-color 180ms cubic-bezier(.23,1,.32,1), color 180ms cubic-bezier(.23,1,.32,1);
+}
+
+.liquid-bottom-item:active { transform: scale(.96); }
+.liquid-bottom-item:disabled { opacity: .54; }
+
+.liquid-bottom-item.is-active {
+  color: var(--cat-cream);
+  border-color: var(--liquid-edge-strong);
+  background: linear-gradient(145deg, rgba(255,255,255,.28), rgba(139,233,253,.12));
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.62), 0 8px 22px -12px var(--liquid-shadow);
+}
+
+.liquid-bottom-icon {
+  display: flex;
+  height: 22px;
+  align-items: center;
+  font-size: 18px;
+  transition: transform 180ms cubic-bezier(.23,1,.32,1);
+}
+
+.liquid-bottom-item.is-active .liquid-bottom-icon { transform: translateY(-1px) scale(1.08); }
+
+.liquid-bottom-item.is-primary .liquid-bottom-icon {
+  width: 42px;
+  height: 42px;
+  margin-top: -18px;
+  justify-content: center;
+  border: 1px solid var(--liquid-edge-strong);
+  border-radius: 16px;
+  color: #14213D;
+  background: var(--cat-btn-gradient);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.72), 0 10px 24px -10px var(--cat-gold-glow);
+}
+
+.liquid-bottom-item.is-primary > span:last-child {
+  margin-top: -1px;
+  color: var(--cat-cream);
+  font-weight: 900;
+}
+
+.liquid-mobile-sheet {
+  z-index: 80 !important;
+  color: var(--cat-cream);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.13), transparent 48%),
+    color-mix(in srgb, var(--cat-surface) 92%, transparent) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(1.7);
+  backdrop-filter: blur(28px) saturate(1.7);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.35), 0 -24px 70px -26px var(--liquid-shadow);
+}
+
+.liquid-sheet-tile,
+.liquid-utility-button,
+.liquid-secondary-button {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid var(--cat-border);
+  border-radius: 18px;
+  color: var(--cat-cream);
+  background: var(--cat-container-high);
+  transition: transform 160ms cubic-bezier(.23,1,.32,1), border-color 180ms cubic-bezier(.23,1,.32,1), background-color 180ms cubic-bezier(.23,1,.32,1);
+}
+
+.liquid-sheet-tile { justify-content: flex-start; padding: 10px 12px; }
+.liquid-sheet-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--liquid-edge);
+  border-radius: 13px;
+  color: var(--cat-gold);
+  background: var(--liquid-fill);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.5);
+}
+.liquid-sheet-tile.is-active { border-color: var(--cat-border-glow); box-shadow: 0 0 22px var(--cat-gold-glow); }
+.liquid-utility-button { min-width: 0; flex-direction: column; padding: 9px 6px; font-size: 10px; }
+.liquid-utility-button span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.liquid-sheet-tile:active, .liquid-utility-button:active, .liquid-secondary-button:active { transform: scale(.97); }
+
+.liquid-segmented {
+  display: flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--cat-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cat-surface) 74%, transparent);
+}
+
+.liquid-segmented button {
+  display: grid;
+  width: 34px;
+  height: 30px;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--cat-muted);
+}
+
+.liquid-segmented button.is-active {
+  color: var(--cat-cream);
+  background: var(--liquid-fill-hover);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.44), 0 5px 14px -8px var(--liquid-shadow);
+}
+
+/* Shared AI analysis wait state */
+.liquid-analysis-backdrop {
+  background: color-mix(in srgb, var(--cat-surface) 78%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(1.35);
+  backdrop-filter: blur(18px) saturate(1.35);
+}
+
+.liquid-analysis-panel {
+  color: var(--cat-cream);
+  border: 1px solid var(--liquid-edge);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(139,233,253,.18), transparent 35%),
+    radial-gradient(circle at 88% 16%, rgba(167,139,250,.2), transparent 38%),
+    color-mix(in srgb, var(--cat-container) 90%, transparent);
+  -webkit-backdrop-filter: blur(28px) saturate(1.65);
+  backdrop-filter: blur(28px) saturate(1.65);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.5), 0 32px 90px -30px var(--liquid-shadow), 0 0 48px var(--liquid-glow);
+}
+
+.liquid-divination-orbit {
+  position: relative;
+  display: grid;
+  width: 112px;
+  height: 112px;
+  place-items: center;
+}
+
+.liquid-orbit-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-top-color: var(--cat-gold);
+  border-right-color: color-mix(in srgb, var(--cat-plum) 75%, transparent);
+  border-radius: 999px;
+  box-shadow: inset 0 0 24px var(--liquid-glow), 0 0 28px var(--liquid-glow);
+}
+
+.liquid-orbit-core {
+  display: grid;
+  width: 74px;
+  height: 74px;
+  place-items: center;
+  border: 1px solid var(--liquid-edge-strong);
+  border-radius: 24px;
+  font-size: 32px;
+  background: linear-gradient(145deg, rgba(255,255,255,.3), rgba(139,233,253,.12)), var(--liquid-fill);
+  box-shadow: inset 0 1px 2px rgba(255,255,255,.58), 0 16px 30px -14px var(--liquid-shadow);
+}
+
+.liquid-orbit-spark { position: absolute; right: -2px; top: 13px; color: var(--cat-gold); filter: drop-shadow(0 0 8px var(--cat-gold)); }
+.liquid-analysis-step span:first-child { background: color-mix(in srgb, var(--cat-muted) 24%, transparent); }
+.liquid-analysis-step.is-active span:first-child { background: linear-gradient(90deg, var(--cat-gold), var(--cat-plum)); box-shadow: 0 0 12px var(--cat-gold-glow); }
+.liquid-error-orb { color: #E45672; border: 1px solid rgba(228,86,114,.35); background: rgba(228,86,114,.1); box-shadow: 0 0 30px rgba(228,86,114,.18); }
+.liquid-secondary-button { padding: 12px 16px; font-size: 14px; font-weight: 700; }
+
+.reading-result-backdrop {
+  background: color-mix(in srgb, var(--cat-surface) 84%, transparent);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.reading-result-panel {
+  color: var(--cat-cream);
+  border: 1px solid var(--cat-border);
+  background: var(--cat-card-gradient);
+  box-shadow: 0 30px 90px -28px var(--liquid-shadow), inset 0 1px 0 rgba(255,255,255,.16);
+}
+
+.reading-next-path {
+  border: 1px solid var(--liquid-edge);
+  background:
+    radial-gradient(circle at 90% 0%, var(--liquid-glow), transparent 36%),
+    var(--cat-container-high);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16);
+}
+
+.reading-next-button {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--cat-border);
+  border-radius: 20px;
+  padding: 9px 11px;
+  color: var(--cat-cream);
+  background: color-mix(in srgb, var(--cat-surface) 72%, transparent);
+  transition: transform 160ms cubic-bezier(.23,1,.32,1), border-color 180ms cubic-bezier(.23,1,.32,1), box-shadow 180ms cubic-bezier(.23,1,.32,1);
+}
+
+.reading-next-button:hover { border-color: var(--cat-border-glow); box-shadow: 0 10px 28px -18px var(--liquid-shadow); }
+.reading-next-button:active { transform: scale(.98); }
+
+/* Mobile MVP supporting patterns */
+.mobile-reward-strip {
+  min-height: 62px;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid var(--liquid-edge);
+  border-radius: 20px;
+  color: var(--cat-cream);
+  background: linear-gradient(135deg, rgba(255,255,255,.16), transparent 54%), var(--cat-container-high);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.42), 0 14px 32px -24px var(--liquid-shadow);
+}
+
+.mobile-reward-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--liquid-edge-strong);
+  border-radius: 15px;
+  color: var(--cat-gold);
+  background: var(--liquid-fill);
+}
+
+.mobile-reward-action {
+  min-width: 74px;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid rgba(255,255,255,.58);
+  border-radius: 14px;
+  color: #174EA6;
+  background: var(--cat-btn-gradient);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.7), 0 8px 18px -12px var(--cat-gold-glow);
+  font-size: 11px;
+  font-weight: 900;
+  transition: transform 150ms cubic-bezier(.23,1,.32,1), filter 180ms cubic-bezier(.23,1,.32,1);
+}
+
+.mobile-reward-action:active { transform: scale(.96); }
+.mobile-reward-action:disabled { color: var(--cat-muted); filter: grayscale(.28); opacity: .7; }
+
+.tarot-scrollspy {
+  position: sticky;
+  z-index: 30;
+  top: 78px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid var(--liquid-edge);
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--cat-nav-bg) 94%, transparent);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  backdrop-filter: blur(20px) saturate(1.5);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.42), 0 14px 32px -24px var(--liquid-shadow);
+}
+
+.tarot-scrollspy button {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 15px;
+  color: var(--cat-muted);
+  font-size: 10px;
+  font-weight: 800;
+  transition: transform 150ms cubic-bezier(.23,1,.32,1), background-color 180ms cubic-bezier(.23,1,.32,1), color 180ms cubic-bezier(.23,1,.32,1);
+}
+
+.tarot-scrollspy button:active { transform: scale(.97); }
+.tarot-scrollspy button.is-active {
+  color: var(--cat-cream);
+  background: var(--liquid-fill-hover);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.52), 0 7px 16px -12px var(--liquid-shadow);
+}
+
+.tarot-scrollspy-index {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--cat-muted);
+  background: var(--cat-container-highest);
+  font-size: 9px;
+}
+
+.tarot-scrollspy button.is-active .tarot-scrollspy-index {
+  color: #14213D;
+  background: var(--cat-btn-gradient);
+}
+
+.liquid-empty-state {
+  border: 1px solid var(--cat-border);
+  color: var(--cat-cream);
+  background: var(--cat-card-gradient);
+  box-shadow: 0 18px 42px -28px var(--liquid-shadow);
+}
+
+.liquid-date-trigger {
+  color: var(--cat-cream);
+  border-color: var(--cat-border);
+  background: color-mix(in srgb, var(--cat-container) 88%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.28);
+}
+
+.liquid-date-popover {
+  z-index: 70;
+  color: var(--cat-cream);
+  border: 1px solid var(--liquid-edge) !important;
+  border-radius: 22px !important;
+  background: color-mix(in srgb, var(--cat-container) 94%, transparent) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  backdrop-filter: blur(24px) saturate(1.5);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.4), 0 24px 60px -28px var(--liquid-shadow);
+}
+
+/* Convert recurring legacy dark utility colors into theme tokens in light mode. */
+[data-theme="light"] [class*="bg-[#110918]"],
+[data-theme="light"] [class*="bg-[#14081E]"],
+[data-theme="light"] [class*="bg-[#180B22]"],
+[data-theme="light"] [class*="bg-[#1A0724]"],
+[data-theme="light"] [class*="bg-[#1E0E2A]"],
+[data-theme="light"] [class*="bg-[#24102E]"],
+[data-theme="light"] [class*="bg-[#250F35]"],
+[data-theme="light"] [class*="bg-[#2A143A]"],
+[data-theme="light"] [class*="bg-[#361A4A]"],
+[data-theme="light"] [class*="bg-[#842C71]"] {
+  background-color: var(--cat-container) !important;
+}
+
+[data-theme="light"] [class*="text-[#FAE9CA]"] { color: var(--cat-cream) !important; }
+[data-theme="light"] [class*="text-[#C9B49D]"] { color: var(--cat-muted) !important; }
+[data-theme="light"] [class*="text-[#EAC272]"],
+[data-theme="light"] [class*="text-[#F2CB80]"],
+[data-theme="light"] [class*="text-[#FFDE9E]"] { color: var(--cat-gold) !important; }
+[data-theme="light"] [class*="from-[#24102E]"],
+[data-theme="light"] [class*="from-[#180B22]"],
+[data-theme="light"] [class*="from-[#110918]"],
+[data-theme="light"] [class*="from-[#2A143A]"],
+[data-theme="light"] [class*="from-[#3D144E]"],
+[data-theme="light"] [class*="from-[#3D1452]"] {
+  background-image: var(--cat-card-gradient) !important;
+}
+[data-theme="light"] .liquid-toast { color: var(--cat-cream) !important; }
+[data-theme="light"] .liquid-app .text-white,
+[data-theme="light"] .liquid-app [class*="text-slate-100"],
+[data-theme="light"] .liquid-app [class*="text-slate-200"],
+[data-theme="light"] .liquid-app [class*="text-slate-300"] {
+  color: #22324F !important;
+}
+[data-theme="light"] .liquid-app [class*="text-slate-400"],
+[data-theme="light"] .liquid-app [class*="text-slate-500"] {
+  color: #53627A !important;
+}
+[data-theme="light"] .liquid-app [class*="text-amber-200"],
+[data-theme="light"] .liquid-app [class*="text-amber-300"] {
+  color: #7A5311 !important;
+}
+[data-theme="light"] .liquid-app [class*="text-purple-200"],
+[data-theme="light"] .liquid-app [class*="text-purple-300"] {
+  color: #6544A8 !important;
+}
+[data-theme="light"] .liquid-app [class*="text-pink-300"],
+[data-theme="light"] .liquid-app [class*="text-pink-400"] {
+  color: #A12A70 !important;
+}
+[data-theme="light"] .liquid-app [class*="text-[#AEFFE4]"] { color: #087E77 !important; }
+[data-theme="light"] .liquid-app [class*="bg-slate-900"],
+[data-theme="light"] .liquid-app [class*="bg-slate-950"] {
+  background-color: rgba(255,255,255,.78) !important;
+}
+[data-theme="light"] .tarot-mvp-hero,
+[data-theme="light"] .tarot-selected-card,
+[data-theme="light"] .tarot-pile-card,
+[data-theme="light"] .fate-synchronicity-banner,
+[data-theme="light"] .weekly-diagnosis-card {
+  background: var(--cat-card-gradient) !important;
+  border-color: var(--cat-border) !important;
+}
+[data-theme="light"] .tarot-mvp-hero p,
+[data-theme="light"] .tarot-selected-card p,
+[data-theme="light"] .tarot-pile-card span,
+[data-theme="light"] .fate-synchronicity-banner p,
+[data-theme="light"] .fate-synchronicity-banner strong {
+  text-shadow: none !important;
+}
+[data-theme="light"] .mother-chat-cta {
+  color: #174EA6 !important;
+  background: var(--cat-btn-gradient) !important;
+  border-color: rgba(41, 101, 199, .24) !important;
+}
+[data-theme="light"] .mother-chat-cta svg { color: #174EA6 !important; }
+[data-theme="light"] .prose-invert {
+  --tw-prose-body: var(--cat-cream);
+  --tw-prose-headings: var(--cat-cream);
+  --tw-prose-bold: var(--cat-cream);
+  --tw-prose-bullets: var(--cat-gold);
+  --tw-prose-links: var(--cat-gold);
+}
+
+.liquid-aurora-field {
+  opacity: 0.58;
+  filter: saturate(1.25);
+}
+
+.liquid-aurora-field > div:nth-child(1) {
+  animation: liquid-drift-a 12s ease-in-out infinite alternate;
+}
+
+.liquid-aurora-field > div:nth-child(2) {
+  animation: liquid-drift-b 15s ease-in-out infinite alternate;
+}
+
+.liquid-aurora-field > div:nth-child(3) {
+  animation: liquid-drift-a 18s ease-in-out infinite alternate-reverse;
+}
+
+/* Opaque content plane: deliberately not glassmorphism. */
+.velvet-card {
+  background: var(--cat-card-gradient) !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-color: var(--cat-border) !important;
+  box-shadow: 0 22px 50px -28px rgba(0, 0, 0, 0.78), inset 0 1px 0 rgba(255,255,255,.055);
+}
+
+.btn-gilded {
+  background:
+    radial-gradient(circle at 24% 14%, rgba(255,255,255,.82), transparent 18%),
+    var(--cat-btn-gradient) !important;
+  border: 1px solid rgba(255,255,255,.52) !important;
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.7),
+    inset 0 -1px 1px rgba(18,28,60,.18),
+    0 12px 32px -14px var(--cat-gold-glow) !important;
+}
+
+.liquid-app input,
+.liquid-app textarea,
+.liquid-app select {
+  background-color: color-mix(in srgb, var(--cat-container) 84%, transparent) !important;
+  border-color: var(--liquid-edge) !important;
+  color: var(--cat-cream) !important;
+}
+
+.liquid-app :is(button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--cat-gold) 88%, white);
+  outline-offset: 3px;
+}
+
+@keyframes liquid-drift-a {
+  from { transform: translate3d(-3%, calc(-2% + var(--liquid-parallax-slow, 0px)), 0) scale(0.96); }
+  to { transform: translate3d(6%, calc(5% + var(--liquid-parallax-slow, 0px)), 0) scale(1.08); }
+}
+
+@keyframes liquid-drift-b {
+  from { transform: translate3d(5%, calc(-3% + var(--liquid-parallax-fast, 0px)), 0) scale(1.06); }
+  to { transform: translate3d(-5%, calc(6% + var(--liquid-parallax-fast, 0px)), 0) scale(0.94); }
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .liquid-navbar,
+  .liquid-dock,
+  .liquid-toolbar,
+  .liquid-popover,
+  .liquid-toast {
+    background: var(--cat-container-high) !important;
+  }
+  .liquid-bottom-nav,
+  .liquid-mobile-sheet,
+  .liquid-analysis-panel {
+    background: var(--cat-container-high) !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .liquid-navbar,
+  .liquid-dock,
+  .liquid-toolbar,
+  .liquid-popover,
+  .liquid-toast,
+  .liquid-navbar button,
+  .liquid-dock button {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: var(--cat-container-high) !important;
+  }
+  .liquid-bottom-nav,
+  .liquid-mobile-sheet,
+  .liquid-analysis-panel {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: var(--cat-container-high) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liquid-aurora-field > div {
+    animation: none !important;
+  }
+
+  .liquid-header-shell,
+  .liquid-navbar,
+  .liquid-navbar button,
+  .liquid-dock button,
+  .liquid-toolbar button {
+    transition-duration: 0.01ms !important;
+  }
+
+  .liquid-orbit-ring,
+  .liquid-orbit-core {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .liquid-header-shell {
+    padding: 6px 6px 0;
+  }
+
+  .liquid-navbar {
+    border-radius: 22px;
+  }
+
+  .liquid-header-shell.is-compact .liquid-navbar {
+    border-radius: 22px;
+  }
+
+  .liquid-dock {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .liquid-app main {
+    padding-top: 12px;
+  }
+
+  .tarot-mvp-hero {
+    border-radius: 22px;
+  }
+}
