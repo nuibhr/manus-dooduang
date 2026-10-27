@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1790419810908,
+      "tag": "0000_flawless_manta",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1790662761504,
+      "tag": "0001_dusty_viper",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1791253405215,
+      "tag": "0002_round_rogue",
+      "breakpoints": true
+    }
+  ]
+}
